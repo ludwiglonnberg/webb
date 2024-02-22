@@ -1,0 +1,306 @@
+body {
+	
+	font-family: 'Jost';
+	margin: 0;
+	padding: 0;
+	
+
+}
+
+a{
+	color: #333;
+	text-decoration: none;
+	
+}
+
+a:hover{
+	color: #8a8787;
+}
+
+li {
+	list-style: none;
+}
+
+ul {
+	padding: 0;
+}
+
+input{
+	padding: 5px;
+}
+
+
+header {
+	display: grid;
+	grid-template-areas: "logo nav search profile";
+	grid-template-columns: 1fr 3fr 1fr 1fr;
+	grid-template-rows: 100px;
+	align-items: center;
+	position: relative;
+	height: 100px;
+	width: 100%;
+	background: linear-gradient(#e5e5e5, #ffffff);
+	box-shadow: 5px 5px 20px 0px #8b8c8d;
+}
+
+.logo {
+	grid-area: logo;
+	
+}
+
+.logo img {
+	width: 250px;
+	padding: 20px;
+	
+}
+  
+.nav {
+	grid-area: nav;
+	font-size: 32px;
+	font-weight: 900;
+}
+  
+.nav > ul > li {
+	padding: 0.5rem;
+	display: inline;
+	margin: 15px;
+}
+
+header input{
+	grid-area: search;
+	min-width: 100px;
+	max-width: 200px;
+}
+  
+.profile {
+	grid-area: profile;
+}
+
+.profile > ul > li > a > img:hover{
+	filter: invert(50%);
+}
+  
+.profile > ul > li {
+	padding: 0.5rem;
+	display: inline;
+	margin-right: 10px;
+} 
+
+.hero > img{
+	width: 100%;
+	height: auto;
+
+}
+
+.container {
+	background-color: #e5e5e5;
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+	grid-template-columns: repeat(3, minmax(400px, 1fr));
+	gap: 30px;
+	max-width: 100%;
+	padding-left: 200px;
+	padding-right: 200px;
+	text-align: center;
+	box-shadow: 5px 5px 20px 0px #00000031;
+
+}
+
+.container h1 {
+	grid-column: 2;
+}
+
+.products{
+	
+	grid-row: 2;
+	position: relative;
+	overflow: hidden;
+	border-radius: 15px;
+	box-shadow: 5px 5px 20px 0px #00000031;
+
+}
+
+.products:hover{
+	transform: scale(105%);
+}
+
+.products h1{
+	margin: 0;
+	font-size: 2rem;
+}
+
+.imgtext{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	height: 20%; 
+	box-sizing: border-box;
+	color: #e5e5e5;
+	background-color: rgba(0, 0, 0, 0.473); 
+}
+
+.products > a > img{
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+
+	
+}
+
+
+.guide{
+	background: rgba(15, 30, 243, 0.178);
+	grid-column: 1;
+	text-align: left;
+	height: auto;
+	padding: 20px;
+	border-radius: 15px;
+	font-size: larger;
+	box-shadow: 5px 5px 20px 0px #00000031;
+	
+}
+
+.guide > .products {
+	background: #b9d7ff;
+	width: fit-content;
+	transform: scale(110%);
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	text-align: center;
+	
+
+}
+
+.guide > .products > a {
+	color: #000000;
+}
+
+#container-2{
+	position: relative;
+	padding-top: 50px;
+	background: linear-gradient(#b8b6b6, #afaeae);
+	box-shadow: 5px 5px 20px 0px #00000031;
+}
+ 
+#container-3{
+	padding-top: 70px;
+	background: #ffffff;
+}
+
+info > img{
+	background: #bdbcbc;
+	padding: 7px;
+	border-radius: 55px;
+	
+}
+
+.bigcontainer > ul >li{
+	display: inline;
+}
+.bigcontainer >ul li:not(:last-child):after{
+	content: " >";
+}
+
+.bigcontainer {
+	justify-content: center;
+	display: grid;
+	grid-template-columns: 300px minmax(600px,1200px);
+	margin: 20px;
+	padding: 20px;
+
+}
+
+.productcontainer {
+	display: grid;
+	grid-template-columns: repeat(3,minmax(200px,1fr));
+	grid-template-rows: repeat(auto,200px);
+	gap: 20px;
+	justify-items: center;
+	height: fit-content;
+	background-color: #e5e5e5;
+	border-radius: 15px;
+	padding: 20px;
+	margin: 20px;
+	padding-bottom: 70px;
+	box-shadow: 5px 5px 5px 0px #00000031;
+}
+
+#left{
+	grid-column: 1;
+	justify-items: left;
+	
+}
+#left  > img{
+	border-radius: 15px;
+}
+
+#right h1{
+	justify-self: left;
+	margin: 20px;
+	grid-column: span 3;
+	
+}
+
+.review >ul >li{
+	position: relative;
+	display: inline;
+}
+
+#about p {
+	grid-column: 1;
+}
+
+.showcase {
+	height: 200px;
+	overflow: hidden;
+	grid-row: 2;
+	grid-column: 3;
+
+}
+
+.review .products {
+	position: relative;
+	padding-inline: 20px;
+	z-index: 0;
+}
+.review info img{
+	height: 38px;
+	width: auto;
+}
+.item img{
+	border-radius: 15px;
+	box-shadow: 5px 5px 5px 0px #00000031;
+	
+}
+
+footer {
+	display: grid;
+	grid-template-rows: repeat(4, auto);
+	grid-template-columns: repeat(4, minmax(200px, 500px));
+	column-gap: 50px;
+	background-color: #e5e5e5;
+	box-shadow: 0px 0px 20px 3px #8b8c8d;
+	color: #333;
+	bottom: 0;
+	position: bottom;
+	width: 100%;
+}
+
+.logo2 img {
+	height: 60px;	
+}
+
+.socials {
+	text-align: center;
+}
+
+.socials > ul > li {
+	display: inline;
+
+}
+
+.socials > ul > li > a > img:hover{
+	filter: invert(50%);
+}
