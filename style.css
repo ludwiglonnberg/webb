@@ -149,7 +149,7 @@ header input{
 	
 }
 
-
+/*Guide page*/
 .guide{
 	background: rgba(15, 30, 243, 0.178);
 	grid-column: 1;
@@ -204,20 +204,12 @@ info > img{
 }
 
 .bigcontainer {
-	justify-content: center;
-	display: grid;
-	grid-template-columns: 300px minmax(600px,1200px);
 	margin: 20px;
 	padding: 20px;
-
 }
 
 .productcontainer {
-	display: grid;
-	grid-template-columns: repeat(3,minmax(200px,1fr));
-	grid-template-rows: repeat(auto,200px);
-	gap: 20px;
-	justify-items: center;
+	
 	height: fit-content;
 	background-color: #e5e5e5;
 	border-radius: 15px;
@@ -225,6 +217,91 @@ info > img{
 	margin: 20px;
 	padding-bottom: 70px;
 	box-shadow: 5px 5px 5px 0px #00000031;
+}
+
+#TKL {
+	
+	width: 60%;
+	display: grid;
+	grid-template-columns: 60% 30%;
+	grid-template-rows: 10% 60% 30%;
+	gap: 10px;
+	padding: 40px;
+	margin: 0 auto;
+	
+}
+
+
+#mainimg {
+	grid-row: 2;
+	grid-column: 1;
+}
+
+#mainimg img{
+	
+	width: 100%px;
+	
+}
+
+.thumbnail {
+	display: grid;
+	grid-template-columns: repeat(4, 178px); /* Adjust the number of columns based on your needs */
+	gap: 10px;
+	
+}
+      
+.thumbnail img {
+	width: 100%;	
+}
+
+
+#specs td, #specs th{
+	border:1px ridge;
+	padding: 8px;
+
+}
+#TKL-container h2{
+	grid-column: 2;
+	text-align: center;
+}
+
+#specs th {
+	text-align: left;
+	background-color: #e5e5e5;
+	color: #333;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+#specs > h2{
+	grid-column: 2;
+	text-align: center;
+}
+
+#specs{
+	grid-column: 2;
+	width: 60%;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin: 0 auto;
+}
+      
+#video{
+	grid-column: 1/2;
+	text-align: center;
+	width: 100%;
+
+}
+
+/*Product page*/
+
+#big-productcontainer{
+	justify-content: center;
+	display: grid;
+	grid-template-columns: 300px minmax(600px,1200px);
+	grid-template-rows: auto;
 }
 
 #left{
@@ -235,14 +312,19 @@ info > img{
 #left  > img{
 	border-radius: 15px;
 }
-
+#right {
+	display: grid;
+	grid-template-columns: repeat(3,minmax(200px,1fr));
+	grid-template-rows: repeat(auto,200px);
+	gap: 20px;
+}
 #right h1{
 	justify-self: left;
 	margin: 20px;
 	grid-column: span 3;
 	
 }
-
+/*About page*/
 .review >ul >li{
 	position: relative;
 	display: inline;
