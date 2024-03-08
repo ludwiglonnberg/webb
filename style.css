@@ -3,7 +3,7 @@ body {
 	font-family: 'Jost';
 	margin: 0;
 	padding: 0;
-	background-color: #333;
+	
 	
 
 }
@@ -34,14 +34,14 @@ input{
 header {
 	display: grid;
 	grid-template-areas: "logo nav search profile";
-	grid-template-columns: 1fr 3fr 1fr 1fr;
+	grid-template-columns: auto;
 	grid-template-rows: 100px;
 	align-items: center;
 	position: relative;
 	height: 100px;
 	width: 100%;
 	background: linear-gradient(#e5e5e5, #ffffff);
-	box-shadow: 5px 5px 20px 0px #8b8c8d;
+	box-shadow: 5px 5px 20px 0px #00000031;
 }
 
 .logo {
@@ -67,12 +67,19 @@ header {
 	margin: 15px;
 }
 
-header input{
+#search-container input {
 	grid-area: search;
-	min-width: 100px;
 	max-width: 200px;
+	background: url(media/Search.png) no-repeat;
+	background-position: 2%;
+	font-size: large;
+	padding-left: 45px;
 }
-  
+
+#hamburger{
+	display: none;
+}
+
 .profile {
 	grid-area: profile;
 }
@@ -86,6 +93,53 @@ header input{
 	display: inline;
 	margin-right: 10px;
 } 
+
+
+@media screen and (max-width: 1500px) {
+	header {
+		grid-template-columns: 1fr 1fr 1fr;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	#hamburger {
+		grid-column: 1;
+		display: inline;
+		text-align: center;
+
+	}
+
+	#search-container{
+		display: none;
+	}
+	.logo{
+		grid-column: 2;
+		text-align: center;
+	}
+	
+	
+	.nav{
+		display: none;
+	}
+
+	.profile{
+		grid-column: 3;
+		justify-self: center;
+	}
+	
+	#shadow {
+		display: none;
+	}
+
+	.hero {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		
+	}
+	.hero > img{
+		grid-column: 1;
+	}
+}
 .hero {
 	display: grid;
 	grid-template-columns: 25% 10% 65%;
@@ -112,7 +166,6 @@ header input{
 	grid-row: 1;
 	height: 100%;
 	place-items: center;
-	width: 120%;
 	background-color: #a8cbfa;
 	clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
 	width: 100%;
@@ -129,19 +182,12 @@ header input{
 
 }
 
-.herotext .products{
-	width: 50%;
-	max-width: 100px;
-	padding: 3px;
-	background-color: #fc7554;
-	color: #fff;
-	text-align: center;
+.hero input[type="button"]{
+	background-color: #ff661f;
 }
-
-.herotext .products > a {
-	color: #e5e5e5;
+.hero input[type="button"]:hover {
+	background-color: #f34f03;
 }
-
 .container {
 	
 	background-color: #e5e5e5;
@@ -156,6 +202,7 @@ header input{
 	padding-bottom: 60px;
 	padding-left: 200px;
 	padding-right: 200px;
+	place-items: center;
 }
 .container h1 {
 	grid-column: 2;
@@ -163,12 +210,12 @@ header input{
 
 
 .products{
-	max-width: 100%;
+	max-width: 90%;
+	min-width: 340px;
 	grid-row: 2;
 	position: relative;
 	overflow: hidden;
-	border-radius: 15px;
-	
+	border-radius: 15px;	
 
 }
 
@@ -209,26 +256,14 @@ header input{
 	border-radius: 15px;
 	font-size: larger;
 	place-items: center;
-
+	max-width: 350px;
 	box-shadow: 5px 5px 20px 0px #00000031;
 	
 }
 
-.guide > .products {
-	background: #b9d7ff;
-	place-items: center;
-	width: fit-content;
-	padding-left: 5px;
-	padding-right: 5px;
-
-}
-
-.guide > .products > a {
-	color: #000000;
-}
-
 #container-2 {
 	display: grid;
+	min-height: fit-content;
 	grid-template-rows: 450px;
 	place-items: center;
 	overflow: hidden;
@@ -238,6 +273,7 @@ header input{
 
 #container-2 img {
 	width: 100%;
+
 	opacity: 30%;
 	grid-column: 1/4;
 	grid-row: 1
@@ -279,38 +315,82 @@ info > img{
 	box-shadow: 5px 5px 5px 0px #00000031;
 }
 
-#TKL {
+#TKL-container{
+	
+	grid-template-columns: 1fr;
+}
 
-	width: 60%;
+#TKL {
+	width: 1000px;
+	margin: auto;
 	display: grid;
-	grid-template-columns: 60% 30%;
-	grid-template-rows: 10% 60% 30%;
-	gap: 10px;
-	margin: 0 auto;
+	grid-template-columns: 3fr 1fr ;
+	grid-template-rows: repeat(4,auto);
+	gap: 15px;
+	padding-right: 100px;
+	padding-left: 100px;
+	
 	
 }
 
+#TKL img {
+	border-radius: 15px;
+}
 
-#TKL #mainimg {
-	grid-row: 2;
+#TKL > div > h2{
+	text-align: left;
+}
+      
+#tklreview p {
+	display: inline;
+	vertical-align: top; 
+	font-size: large; 
+}
+
+
+#mainimg {
+	grid-column: 1;	
+
 }
 
 #mainimg img{
 	width: 100%;
 	
+	
 }
 
 .thumbnail {
 	display: grid;
-	grid-template-columns: repeat(4, 178px); 
+	grid-template-columns: repeat(4,auto);
 	gap: 10px;
+	grid-column: 1;
 	
 }
       
 .thumbnail img {
 	width: 100%;	
+	grid-row: 1;
+	
 }
 
+#options {
+	grid-column: 2;
+	margin-bottom: 28px;
+}
+
+#recommendations{
+	grid-column: 1;
+	
+}
+
+#recommendations img{
+	width: 100%;
+	
+}
+
+#recommendations p {
+	margin: 0 auto;
+}
 
 #specs td, #specs th{
 	border:1px ridge;
@@ -318,11 +398,12 @@ info > img{
 
 }
 #TKL-container h2{
-	grid-column: 2;
+	
 	text-align: center;
 }
 
 #specs th {
+	
 	text-align: left;
 	background-color: #e5e5e5;
 	color: #333;
@@ -338,7 +419,7 @@ tr:nth-child(even) {
 }
 
 #specs{
-	grid-column: 2;
+	grid-column: 1;
 	width: 60%;
 	padding-top: 40px;
 	padding-bottom: 40px;
@@ -346,7 +427,7 @@ tr:nth-child(even) {
 }
       
 #video{
-	grid-column: 1/2;
+	grid-column: 1;
 	text-align: center;
 	width: 100%;
 
@@ -359,6 +440,7 @@ tr:nth-child(even) {
 	display: grid;
 	grid-template-columns: 300px minmax(600px,1200px);
 	grid-template-rows: auto;
+	padding-bottom: 200px;
 }
 
 #left{
@@ -367,7 +449,9 @@ tr:nth-child(even) {
 }
 
 #right {
+
 	display: grid;
+	padding-bottom: 80px;
 	grid-template-columns: repeat(3,minmax(300px,1fr));
 	grid-template-rows: repeat(auto,300px);
 	gap: 20px;
@@ -391,67 +475,50 @@ tr:nth-child(even) {
 	
 }
 #about{
-	place-items: center;
-	padding: 40px;
-	width: 50%;
+	
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-bottom: 70px;
+	width: 1000px;
 	display:grid;
-	gap: 20px;
-	grid-template-columns: 1fr 1fr 1fr;
-
+	place-items: center;
+	
 }
 
 #about h2 {
-	grid-column: 2;
+	grid-column: 1;
 }
-
 
 #about p {
 	
 	text-align: left;
 	font-size: large;
-	grid-column: 2/3;
-}
-
-.showcase {
-	place-items: center;
-	width: 100%;
-	grid-column: 2;
 	
-
 }
 
 .showcase img{
 	border-radius: 20px;
 }
+
+.review{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+
+}
+
 reviewtitle{
-	grid-column: 2;
-}
-#kalle{
-	grid-column: 1;
-	grid-row: 8;
-}
-
-#pelle{
-	grid-column: 2;
-	grid-row: 8;
-}
-
-#olle {
-	grid-column: 3;
-	grid-row: 8;
+	text-align: center;
 }
 
 .review .products {
 	background: #fff;
 }
-.review  >ul >li{
-	position: relative;
-	display: inline;
-}
+
 .review .products {
-	position: relative;
 	padding-inline: 20px;
-	z-index: 0;
+	
+	
 }
 .review info img{
 	height: 38px;
@@ -463,19 +530,19 @@ reviewtitle{
 	
 }
 
+/*Contact form*/
 
 #formcontainer{
 	display: grid;
 	place-items: center;
 }
 #contactform{
-	width: 50%;
-
+	width: 1000px;
 	display: grid;
 	grid-template-columns: 1fr 1fr ;
 	column-gap: 20px;
 	padding-left: 70px;
-	padding-right: 70px;
+
 }
 
 #contactform h1{
@@ -498,7 +565,7 @@ reviewtitle{
 	width: 70%;
 }
 
-input[type=submit] {
+input[type=button] {
 	background-color: #72a4ff;
 	color: white;
 	padding: 10px;
@@ -511,7 +578,7 @@ input[type=submit] {
 	cursor: pointer;
 }
 
-input[type=submit]:hover{
+input[type=button]:hover{
 	transform: scale(105%);
 	background-color: #4984f1;
 }
@@ -527,6 +594,10 @@ input[type=text], select, textarea,#message {
 	
 }
 
+textarea {
+	max-width: 100%;
+	min-width: 100%;
+}
 form{
 	grid-column: 1 /span 2;
 	max-width: 500px;
@@ -536,7 +607,37 @@ select{
 	
 	color: #333;
 }
-      
+introguide{
+	grid-column: 1 / span 2;
+	text-align: center;
+}
+#guide-container{
+	display: grid;
+	place-content: center;
+}
+
+#keyguide{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	max-width: 1000px;
+	padding-left: 100px;
+	padding-right: 100px;
+	
+}
+
+#keyguide h2{
+	text-align: center;
+}
+#keyguide p,a,h2 {
+	grid-column: 1;
+
+}
+#keyguide img{
+	grid-column: 2;
+	justify-self: center;
+	padding: 20px;
+}
+
 
 /*Footer*/
 footer {
@@ -551,6 +652,22 @@ footer {
 	width: 100%;
 }
 
+.news input{
+	width: 200px;
+	
+	font-size: large;
+	
+}
+
+#emailinput input[type=button]{
+	width: min-content;
+	padding: 0;
+	padding-inline: 7px;
+	background-color: #000000;
+	opacity: 50%;
+}
+
+	
 .logo2 img {
 	height: 60px;	
 }

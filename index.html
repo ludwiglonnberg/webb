@@ -18,7 +18,7 @@
 
 
 	<header>
-
+		
 		<div class="logo"><a href="index.html"><img src="media\meletrix-black.webp" alt="logo"></a></div>
 
 		<div class="nav">
@@ -30,11 +30,10 @@
 				<li><a href="contactus.html">Contact Us</a></li>
 			</ul>
 		</div>
-
 		
-		
-		<input type="text" placeholder="Search">
-		<!--<a href="#"><img src="Search.png" alt ="search"></a>-->
+		<div id="search-container">
+			<input type="text" placeholder="Search">
+		</div>
 
 		<div class="profile">
 		<ul>
@@ -43,7 +42,10 @@
 			
 		</ul>
 		</div>
-
+		<div id="hamburger">
+			<a href="#"><img src="media\Menu.png" alt ="Menu"></a>
+			<a href="#"><img src="media\Search.png" alt ="Menu"></a>
+		</div>
 	</header>
 
 	<div class = "hero">
@@ -54,7 +56,7 @@
 				<div class="herotext">
 					<h2>ZOOM75 ESSENTIAL EDITION - Skyblue</h2>
 					<p>Our successful ZOOM-series has a new member! Zoom75 is a premium keyboard with everything you could possibly need.</p>
-					<div class = "products"><a href="#">Get it now</a></div>
+					<input type="button" value="Get it now"></div>
 				</div>
 			</div>
 		</div>
@@ -94,7 +96,7 @@
 		<div class = "guide">
 			<h1>Keyboard guide</h1>
 			<p>Learn about our keyboards to find what best suits you!</p>
-			<div class = "products"><a href="keyboardguide.html">Go to guide</a></div>
+			<input type="button" value="Go to guide"></div>
 		</div>
 	</div>
 
@@ -136,8 +138,11 @@
 		<div class="news">
 			<h2>Newsletter</h2>
 			<p>Sign up to be updated with exclusive offers, product releases, news and more!</p>
-			<input type="text" placeholder="Enter your e-mail">
-			
+
+			<div id="emailinput"> 
+				<input type="text" placeholder="Enter your e-mail">
+				<input type="button" value=">">
+			</div>
 			
 		</div>		
 

@@ -31,8 +31,9 @@
 			</ul>
 		</div>
 
-		<input type="text" placeholder="Search">
-		<!--<a href="#"><img src="Search.png" alt ="search"></a>-->
+		<div id="search-container">
+			<input type="text" placeholder="Search">
+		</div>
 
 		<div class="profile">
 		<ul>
@@ -54,33 +55,73 @@
 
 		<div class="productcontainer" id="TKL">
 			<h1>ZOOM TKL ESSENTIAL EDITION</h1>
-			<div class="item">
-				<div id="mainimg"><a href="#"><img src="media\TKL1.webp"></a></div>
-				<label>Case color</label>
-				<select id="Case color" name="Case Color">
-					<option value="skyblue">Sky blue</option>
-					<option value="wildgreen">Wild green</option>
-				</select>
-				<label>Back plates</label>
-				<select id="Case color" name="Case Color">
-					<option value="skyblue">Sky blue</option>
-					<option value="wildgreen">Wild green</option>
-				</select>
-				<label>Default plates</label>
-				<select id="Case color" name="Case Color">
-					<option value="skyblue">Sky blue</option>
-					<option value="wildgreen">Wild green</option>
-				</select>
-				<div class = "products"><a href="#">Add to cart</a></div>
+			
 
-				<div class="thumbnail">
-					<a href="#"><img src="media\TKL5.webp"></a>
-					<a href="#"><img src="media\TKL2.webp"></a>
-					<a href="#"><img src="media\TKL3.webp"></a>
-					<a href="#"><img src="media\TKL4.webp"></a>
+		
+			<div class="item" id="mainimg"><a href="#"><img src="media\TKL1.webp"></a></div>
+
+			<div>
+				<div id="tklreview"><ul>	
+					<li>
+						<img src="media\icon _star_.png">
+						<img src="media\icon _star_.png">
+						<img src="media\icon _star_.png">
+						<img src="media\icon _star_.png">
+						<img src="media\icon _star_.png">
+						<p>4 reviews</p>
+					</li>
+				</ul></div>
+				
+				<h2>$189.00</h2>
+				<div id="options">	
+					<label>Case color</label>
+					<select id="Case_color" name="Case color">
+						<option value="skyblue">Sky blue</option>
+						<option value="wildgreen">Wild green</option>
+					</select>
+					<label>Back plates</label>
+					<select id="Back_plates" name="Back plates">
+						<option value="BlackSLS">Black (Stainless steel PVD Mirror)</option>
+						<option value="SilverSLS">Silver (Stainless steel PVD Mirror)</option>
+						<option value="GoldSLS">Gold (Stainless steel PVD Mirror)</option>
+					</select>
+					<label>Default plates</label>
+					<select id="Default_plates" name="Default plates">
+						<option value="alu">Aluminum plates</option>
+						<option value="PC">Polycarbonate (PC) plates</option>
+					</select>
 				</div>
-			</div>	
+				<input type="button" value="Add to cart">
+				
+			</div>
 
+			<div class="thumbnail">
+				<div class="item"><a href="#"><img src="media\TKL5.webp"></a></div>
+				<div class="item"><a href="#"><img src="media\TKL2.webp"></a></div>
+				<div class="item"><a href="#"><img src="media\TKL3.webp"></a></div>
+				<div class="item"><a href="#"><img src="media\TKL4.webp"></a></div>
+			</div>
+			<div id="recommendations">
+				<h2>Others also viewed</h2>
+				<div class="thumbnail">
+					<div class="products"><a href="#"><img src="media\boog.png"></a>
+						<p>Boog75 prebuilt</p>
+						<p>Price - $229.99</p>
+					</div>
+					<div class="products"><a href="#"><img src="media\image 20.png"></a>
+						<p>ZoomPad Essential Edition</p>
+						<p>From - $90.00</p>
+					</div>
+					<div class="products"><a href="#"><img src="media\image 19.png"></a>
+						<p>Zoom65 Essential Edition</p>
+						<p>From - $185.00</p>
+					</div>
+					<div class="products"><a href="#"><img src="media\image 21.png"></a>
+						<p>WS Switch Series</p>
+						<p>Price - $13.65</p>
+					</div>
+				</div>
+			</div>
 			
 		</div>
 
@@ -96,20 +137,36 @@
 				<td>Gasket mount design</td>
 			</tr>
 			<tr>
-				<td>Aluminum top & bottom case of buyer's choice</td>
-				<td>Gasket mount design</td>
+				<td>SS PVD /Glass/Carbon Fiber back plates kit of buyer's choice</td>
+				<td>80% with F13,WK</td>
 			</tr>
 			<tr>
-				<td>Aluminum top & bottom case of buyer's choice</td>
-				<td>Gasket mount design</td>
+				<td>Hot-swap, multi-layout Bluetooth PCB</td>
+				<td>PCB: 1.2mm, with Ai03 DB</td>
 			</tr>
 			<tr>
-				<td>Aluminum top & bottom case of buyer's choice</td>
-				<td>Gasket mount design</td>
+				<td>Daughterboard/JST cable</td>
+				<td>5° Typing angle</td>
 			</tr>
 			<tr>
-				<td>Aluminum top & bottom case of buyer's choice</td>
-				<td>Gasket mount design</td>
+				<td>Polycarbonate plate/Aluminum plate of buyer's choice</td>
+				<td>18.86 mm front height</td>
+			</tr>
+			<tr>
+				<td>Gasket Sleeves</td>
+				<td>Finish treatment: nano-coating, glass, stainless steel</td>
+			</tr>
+			<tr>
+				<td>Set of WS Stabilizers</td>
+				<td>Default plate: PC or Aluminium Plate</td>
+			</tr>
+			<tr>
+				<td>2250 mAh Li-ion battery</td>
+				<td>Support: split spacebar, split backspace, split left shift and split right shift</td>
+			</tr>
+			<tr>
+				<td>Coiled USB-C cable</td>
+				<td>Bluetooth PCB polling rate in wired mode: 1000hz</td>
 			</tr>
 		</table>
 
@@ -141,11 +198,14 @@
 		<div class="news">
 			<h2>Newsletter</h2>
 			<p>Sign up to be updated with exclusive offers, product releases, news and more!</p>
-			<input type="text" placeholder="Enter your e-mail">
-			
-			
-		</div>		
 
+			<div id="emailinput"> 
+				<input type="text" placeholder="Enter your e-mail">
+				<input type="button" value=">">
+			</div>
+			
+		</div>	
+		
 		<div class="menu">
 		<ul>
 			<h2>Menu</h2>
