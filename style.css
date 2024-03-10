@@ -102,8 +102,7 @@ header {
 @media screen and (max-width: 1500px) {
 	header {
 		grid-template-columns: 1fr 1fr 3fr 2fr;
-		padding-left: 50px;
-		padding-right: 50px;
+		
 	}
 	#hamburger {
 		grid-column: 1;
@@ -131,19 +130,6 @@ header {
 		justify-self: center;
 	}
 	
-	#shadow {
-		display: none;
-	}
-
-	.hero {
-		display: grid;
-		grid-template-columns: 1fr;
-
-		
-	}
-	.hero > img{
-		grid-column: 1;
-	}
 }
 
 
@@ -186,6 +172,7 @@ header {
 	place-items: center;
 	background-color: #a8cbfa;
 	clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+	
 	width: 100%;
 	
 	
@@ -205,6 +192,47 @@ header {
 }
 .hero input[type="button"]:hover {
 	background-color: #f34f03;
+}
+
+@media screen and (max-width: 1500px) {
+
+
+	.hero {
+		
+		grid-template-columns: 1fr;
+		gap: 0px;
+		grid-template-rows: repeat(2,auto);
+	}
+
+	#shadow {
+		width: 100%;
+		grid-row: 2;
+	}
+	#shadow .textbox{
+		clip-path: none;
+		height: fit-content;
+		font-size: smaller;
+		text-align: center;
+		margin: 0;
+		
+	}
+	
+	.hero > img{
+		grid-column: 1;
+	}
+
+	
+}
+
+@media screen and (max-width: 450px){
+	.herotext p {
+		display: none;
+	}
+
+	.herotext{
+		font-size: smaller;
+	}
+	
 }
 .container {
 	
