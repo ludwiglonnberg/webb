@@ -224,41 +224,41 @@ header {
 	
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 500px){
 	.herotext p {
 		display: none;
 	}
 
-	.herotext{
-		font-size: smaller;
-	}
+
 	
 }
 .container {
-	
+	grid-template-columns: 1fr 1fr 1fr;
 	background-color: #e5e5e5;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
 	gap: 30px;
 	max-width: 100%;
 	text-align: center;
 
 }
 #container-1 {
+	
 	padding-bottom: 60px;
-	padding-left: 200px;
-	padding-right: 200px;
+	padding-left: 15%;
+	padding-right: 15%;
 	place-items: center;
 }
+
 .container h1 {
 	grid-column: 2;
+	width: 100%;
 }
 
 
 .products{
 	max-width: 90%;
-	min-width: 340px;
 	grid-row: 2;
+	min-width: 340px;
 	position: relative;
 	overflow: hidden;
 	border-radius: 15px;	
@@ -307,19 +307,22 @@ header {
 	
 }
 
+
+
 #container-2 {
 	display: grid;
 	min-height: fit-content;
-	grid-template-rows: 450px;
+	max-height: max-content;
+	padding-top: 50px;
 	place-items: center;
 	overflow: hidden;
-	height: 450px;
+	
 	
 }
 
 #container-2 img {
+	
 	width: 100%;
-
 	opacity: 30%;
 	grid-column: 1/4;
 	grid-row: 1
@@ -337,7 +340,32 @@ info > img{
 	border-radius: 55px;
 	
 }
+@media screen and (max-width: 1500px){
+	.container{
+		grid-template-columns: 1fr;
+	}
 
+	#container-1 h1{
+		grid-column: 1;
+	}
+	.products{
+		text-align: center;
+		grid-column: 1;
+		grid-row: auto;
+	}
+
+	.guide{
+		grid-column: 1;
+		
+	}
+
+	#container-2 img {
+		object-fit: cover;
+		min-height: 400px;
+		grid-column: 1;
+	}
+	
+}
 
 .bigcontainer > ul >li{
 	display: inline;
@@ -364,6 +392,7 @@ info > img{
 #TKL-container{
 	
 	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3,auto);
 }
 
 #TKL {
@@ -692,6 +721,7 @@ footer {
 	grid-template-columns: repeat(4, minmax(200px, 500px));
 	column-gap: 50px;
 	background-color: #e5e5e5;	
+	place-items: center;
 	color: #333;
 	bottom: 0;
 	position: bottom;
@@ -700,7 +730,6 @@ footer {
 
 .news input{
 	width: 200px;
-	
 	font-size: large;
 	
 }
@@ -729,4 +758,39 @@ footer {
 
 .socials > ul > li > a > img:hover{
 	filter: invert(50%);
+}
+
+@media screen and (max-width: 1000px){
+	footer{
+		grid-template-columns: repeat(2,1fr);
+	}
+
+	.menu {
+		grid-row: 1;
+	}
+	
+	
+}
+
+@media screen and (max-width: 500px){
+	footer{
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(4,auto);
+	}
+
+	.news {
+		text-align: center;
+	}
+
+	.menu{
+		grid-row: auto;
+	}
+
+	#menu-list{
+		grid-row: 1;
+	}
+
+	#help-list{
+		grid-row: 2;
+	}
 }
