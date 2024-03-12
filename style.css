@@ -409,7 +409,9 @@ info > img{
 		grid-column: 1;
 		grid-row: auto;
 	}
-
+	.item {
+		font-size: 20px;
+	}
 	.guide{
 		grid-column: 1;
 		
@@ -643,6 +645,11 @@ tr:nth-child(even) {
 
 /*About page*/
 
+#big-about{
+	display: grid;
+	place-items: center;
+	padding-inline: 20%;
+}
 #about{
 	display: grid;
 	
@@ -651,18 +658,21 @@ tr:nth-child(even) {
 	grid-template-columns: 1fr;
 	
 	place-items: center;
-	margin: auto;
+	
+
 	
 }
 
 #about h2 {
 	grid-column: 1;
 }
-
 #about p {
-	
-	text-align: left;
 	font-size: large;
+	
+}
+#about-description p{
+	margin-inline: 60px;
+	text-align: left;
 	
 }
 
@@ -697,6 +707,17 @@ reviewtitle{
 }
 
 @media screen and (max-width:1500px) {
+	.review {
+		grid-template-columns: 1fr;
+	}
+
+	#about p{
+		font-size: 30px;
+		
+	}
+	#about-description p {
+		padding-bottom: 40px;
+	}
 	
 }
 
@@ -707,20 +728,20 @@ reviewtitle{
 	place-items: center;
 }
 #contactform{
-	width: 1000px;
+	max-width: 1000px;
 	display: grid;
-	grid-template-columns: 1fr 1fr ;
+	grid-template-columns: 1fr ;
 	column-gap: 20px;
-	padding-left: 70px;
+	padding-inline: 70px;
 
 }
 
 #contactform h1{
-	grid-column: 1 / span 2;
+	grid-column: 1 ;
 	text-align: center;
 }
 #contactform p, h3,ul{
-	grid-column: 1 /span 2;
+	grid-column: 1;
 }
 #contactform > ul > li{
 	margin-inline-start: 40px;
@@ -769,7 +790,7 @@ textarea {
 	min-width: 100%;
 }
 form{
-	grid-column: 1 /span 2;
+	grid-column: 1;
 	max-width: 500px;
 }
 
@@ -777,6 +798,23 @@ select{
 	
 	color: #333;
 }
+@media screen and (max-width:1500px){
+	#contactform{
+		place-items: center;
+		font-size: 30px;
+	}
+	
+	input[type=text], select, textarea,#message{
+		padding: 15px;
+		font-size: 25px;
+		
+	}
+	#contactform input[type="button"]{
+		
+		font-size: 30px;
+	}
+}
+/*Guide page*/
 introguide{
 	grid-column: 1 / span 2;
 	text-align: center;
@@ -784,9 +822,10 @@ introguide{
 #guide-container{
 	display: grid;
 	place-content: center;
+	
 }
 
-#keyguide{
+#keyboard-guide{
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	max-width: 1000px;
@@ -795,19 +834,48 @@ introguide{
 	
 }
 
-#keyguide h2{
+#keyboard-guide h2{
 	text-align: center;
 }
-#keyguide p,a,h2 {
+#keyboard-guide p,a,h2 {
 	grid-column: 1;
 
 }
-#keyguide img{
+#keyboard-guide img{
 	grid-column: 2;
 	justify-self: center;
 	padding: 20px;
 }
 
+zoompad{
+	justify-self: center;
+	
+}
+@media screen and (max-width: 1500px){
+	#keyboard-guide{
+		grid-template-columns: 1fr;
+		font-size: 30px;
+		padding-inline: 10%;
+		min-width: 430px;
+	}
+	introguide{
+		grid-column: 1;
+	}
+
+	example{
+		display: none;
+	}
+	
+	#keyboard-guide img:not(zoompad img){
+		grid-column: 1;
+		max-width: 100%;
+		min-width: 400px;
+	}
+
+	zoompad{
+		max-width: 200px;
+	}
+}
 
 /*Footer*/
 footer {
@@ -860,7 +928,10 @@ footer {
 		grid-template-columns: repeat(2,1fr);
 	}
 
-	.menu {
+	#menu-list {
+		grid-row: 1;
+	}
+	#help-list {
 		grid-row: 1;
 	}
 	
@@ -882,23 +953,24 @@ footer {
 	p{
 		font-size: 30px;
 	}
-	.socials{
-		padding-inline: 40px;
+	.socials > ul > li {
+		margin-inline: 8px;
+		width: 100%;
+	
 	}
-	.news {
-		text-align: center;
-	}
-
 
 	.news{
 		grid-row: 3;
+		text-align: center;
 	}
+
 	#menu-list{
 		grid-row: 1;
 	}
 
 	#help-list{
 		grid-row: 2;
+
 		
 	}
 	
