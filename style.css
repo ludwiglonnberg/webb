@@ -495,7 +495,6 @@ tr:nth-child(even) {
 }
 #about{
 	display: grid;
-	margin: auto;
 	padding-bottom: 70px;
 	max-width: 70%;
 	grid-template-columns: 100%;
@@ -866,7 +865,7 @@ footer {
 
 	#about{
 		
-		width: 1000px;
+		width: 80%;
 		place-self: center;
 	}
 	#about p{
