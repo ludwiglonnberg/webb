@@ -819,7 +819,31 @@ footer {
 	}
 	#TKL{
 		grid-template-columns: 1fr;
-		place-items: center;
+		width: 700px;
+
+		text-align: center;
+	}
+	#options{
+		margin-left: 100px;
+		text-align: left;
+		font-size: 20px;
+	}
+	
+	#TKL > div > h2{
+		text-align: center;
+		font-size: 30px;
+	}
+
+	
+	#TKL input[type="button"]{
+		font-size: 40px;
+		border-radius: 40px;
+	}
+
+	#options select{
+		width: 500px;
+	
+		
 	}
 	.thumbnail{
 		grid-row: 3;
