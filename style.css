@@ -495,10 +495,10 @@ tr:nth-child(even) {
 }
 #about{
 	display: grid;
-	
+	margin: auto;
 	padding-bottom: 70px;
-	max-width: 1200px;
-	grid-template-columns: 1fr;
+	max-width: 70%;
+	grid-template-columns: 100%;
 	place-items: center;
 	
 
