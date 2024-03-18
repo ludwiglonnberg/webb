@@ -303,7 +303,7 @@ input[type="checkbox"] + label {
 }
 
 #trail >li:first-child{
-	padding-left: 20px;
+	padding-left: 10%;
 }
 #trail li:not(:last-child):after{
 	content: " >";
