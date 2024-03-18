@@ -286,8 +286,8 @@ input[type="checkbox"] + label {
 	background: #ffffff;
 }
 
-info > img{
-	background: #d3d1d1;
+#circle {
+	background: #b9b8b8;
 	padding: 7px;
 	border-radius: 55px;
 	
@@ -544,7 +544,7 @@ reviewtitle{
 	
 	
 }
-.review info img{
+.review #circle {
 	height: 38px;
 	width: auto;
 }
