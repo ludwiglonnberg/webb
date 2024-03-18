@@ -286,7 +286,7 @@ input[type="checkbox"] + label {
 	background: #ffffff;
 }
 
-#circle {
+.circle {
 	background: #b9b8b8;
 	padding: 7px;
 	border-radius: 55px;
@@ -531,7 +531,7 @@ tr:nth-child(even) {
 .video{
 	max-width: 1000px;
 }
-reviewtitle{
+#reviewtitle{
 	text-align: center;
 }
 
@@ -544,7 +544,7 @@ reviewtitle{
 	
 	
 }
-.review #circle {
+.review .circle {
 	height: 38px;
 	width: auto;
 }
@@ -585,7 +585,7 @@ reviewtitle{
 	width: 70%;
 }
 
-input[type=button] {
+input[type=button],button {
 	background-color: #72a4ff;
 	color: white;
 	padding: 10px;
@@ -598,7 +598,7 @@ input[type=button] {
 	cursor: pointer;
 }
 
-input[type=button]:hover{
+input[type=button],button:hover{
 	transform: scale(105%);
 	background-color: #4984f1;
 }
