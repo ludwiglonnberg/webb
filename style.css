@@ -293,7 +293,21 @@ input[type="checkbox"] + label {
 	
 }
 
+#trail{
+	padding: 20px;
+	
+}
+#trail > li {
+	display: inline;
+	
+}
 
+#trail >li:first-child{
+	padding-left: 20px;
+}
+#trail li:not(:last-child):after{
+	content: " >";
+}
 .bigcontainer > ul >li{
 	display: inline;
 }
