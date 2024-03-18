@@ -293,25 +293,19 @@ input[type="checkbox"] + label {
 	
 }
 
-#trail{
+.trail{
 	padding: 20px;
 	
 }
-#trail > li {
+.trail > li {
 	display: inline;
 	
 }
 
-#trail >li:first-child{
+.trail >li:first-child{
 	padding-left: 10%;
 }
-#trail li:not(:last-child):after{
-	content: " >";
-}
-.bigcontainer > ul >li{
-	display: inline;
-}
-.bigcontainer >ul li:not(:last-child):after{
+.trail li:not(:last-child):after{
 	content: " >";
 }
 
