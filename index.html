@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
 	<meta charset="UTF-8">
 	<meta name="description" content="Meletrix is committed to providing premium mechanical keyboards to enthusiasts around the world">
 	<meta name="author" content="Ludwig Lönnberg">
@@ -28,6 +29,7 @@
 				<li><a href="aboutus.html">About Us</a></li>
 				<li><a href="#">Help</a></li>
 				<li><a href="contactus.html">Contact Us</a></li>
+				<li><button onclick="HelloWorld()">Show Message</button></li>
 			</ul>
 		</div>
 		
@@ -35,6 +37,7 @@
 			<input type="text" placeholder="Search">
 		</div>
 
+		
 		<div class="profile">
 		<ul>
 			<li><a href="#"><img src="media/User.png" alt ="User"></a></li>
@@ -54,31 +57,64 @@
 				<li><a href="#">Help</a></li>
 				<li><a href="contactus.html">Contact Us</a></li>
 				
+				
 			</ul>
 			
 		</div>
 
 		
+
 		<div id="search-icon">
 			<a href="#"><img src="media/Search.png" alt ="Menu"></a>
 		</div>
 
 		
 	</header>
+	
+	
+	
+	<div class = "herocontainer">
 
-	<div class = "hero">
-		<img src="media/skyblue.jpg" alt="Zoom TKL SKY blue">
-
-		<div id ="shadow">
-			<div class ="textbox">
-				<div class="herotext">
-					<h2>ZOOM75 ESSENTIAL EDITION - Skyblue</h2>
-					<p>Our successful ZOOM-series has a new member! Zoom75 is a premium keyboard with everything you could possibly need.</p>
-					<input type="button" value="Get it now">
+		<div class = "hero fade" id ="blue">
+			<img src="media/skyblue.jpg" alt="Zoom TKL SKY blue">
+		
+			</img>
+			<div class ="shadow">
+				<div class ="textbox">
+					<div class="herotext">
+						<h2>ZOOM75 ESSENTIAL EDITION - Skyblue</h2>
+						<p>Our successful ZOOM-series has a new member! 
+						Zoom75 is a premium keyboard with everything
+						you could possibly need.</p>
+						<input type="button" value="Get it now">
+					</div>
 				</div>
 			</div>
+
+			
 		</div>
+		
+		<div class = "hero fade" id="purple">
+			
+			<img src="media/purplekeyboard.png" alt="Zoom purple">
+			<div class ="shadow">
+				<div class ="textbox">
+					
+					<div class="herotext">
+						<h2>ZOOM75 ESSENTIAL EDITION - LILAC</h2>
+						<p>Our successful ZOOM-series has a new member! 
+							Zoom75 is a premium keyboard with everything
+							you could possibly need.</p>
+						<input type="button" value="Get it now">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<a class="prev" onclick="prevSlide(-1)">❮</a>
+		<a class="next" onclick="nextSlide(1)">❯</a>
 	</div>
+	
 
 
 	<div class = "container" id = "container-1">	
@@ -86,9 +122,7 @@
 
 		<div class = "products">
 			<a href="products.html"><img src="media/keyboards.jpg" alt="keyboards link"></a>
-			<div class ="imgtext">
-				<h1>Keyboards</h1>
-			</div>
+			<div class ="imgtext"><h1>Keyboards</h1></div>
 			
 		</div>
 
