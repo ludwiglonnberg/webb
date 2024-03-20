@@ -74,15 +74,15 @@
 	
 	
 	<div class = "herocontainer">
-
-		<div class = "hero fade" id ="blue">
-			<img src="media/skyblue.jpg" alt="Zoom TKL SKY blue">
 		
-			</img>
+		<div class = "hero fade" id ="blue">
+			
+			<img src="media/hero2.png" alt="Zoom TKL SKY blue">
+	
 			<div class ="shadow">
 				<div class ="textbox">
 					<div class="herotext">
-						<h2>ZOOM75 ESSENTIAL EDITION - Skyblue</h2>
+						<h2>ZOOM75 ESSENTIAL EDITION - SKY BLUE</h2>
 						<p>Our successful ZOOM-series has a new member! 
 						Zoom75 is a premium keyboard with everything
 						you could possibly need.</p>
@@ -111,8 +111,34 @@
 			</div>
 			
 		</div>
-		<a class="prev" onclick="prevSlide(-1)">❮</a>
-		<a class="next" onclick="nextSlide(1)">❯</a>
+
+		<div class = "hero fade" id="red">
+			
+			<img src="media/zoom98hero.png" alt="Zoom98 scarlet">
+			<div class ="shadow">
+				<div class ="textbox">
+					
+					<div class="herotext">
+						<h2>ZOOM98 GB - SCARLET RED</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<input type="button" value="Get it now">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<a class="prev" onclick="changeSlide(-1)">❮</a>
+		<a class="next" onclick="changeSlide(1)">❯</a>
+
+
+		<div class="dotcontainer">
+			<a class="dot active" onclick="currentSlide(0)"></a>
+			<a class="dot" onclick="currentSlide(1)"></a>
+			<a class="dot" onclick="currentSlide(2)"></a>
+		</div>
+
+		
 	</div>
 	
 
