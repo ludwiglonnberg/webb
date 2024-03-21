@@ -23,7 +23,7 @@ function showSlide(n) {
 		slideIndex = slides.length -1; 
 	}
 	
-	//hides all slides
+	//hides all slides and removes active state from dots
 	for (let i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 		dots[i].classList.remove("active");

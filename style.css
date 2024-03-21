@@ -105,7 +105,7 @@ input[type="checkbox"] + label {
 	cursor: pointer;
 }
 .dropdown{
-	display:none;
+	display: none;
 	width: 250px;
 	margin-top: 13px;
 	margin-left: 0;
@@ -113,6 +113,7 @@ input[type="checkbox"] + label {
 	left: 0;
 	place-self: center;
 	position: absolute;
+	z-index: 1;
 	border: 1px ridge;
 	border-color: #c5c3c3;
 	background-color: #e5e5e5;
@@ -200,7 +201,6 @@ input[type="checkbox"] + label {
 }
 .dot {
 	position: absolute;
-
 	height: 15px;
 	width: 15px;
 	background-color: #ffffff;
