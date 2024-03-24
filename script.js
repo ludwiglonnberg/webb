@@ -34,3 +34,10 @@ function showSlide(n) {
 	dots[slideIndex].classList.add("active");
 }
 
+function testHover(x){
+	x.innerHTML = "small";
+}
+
+function stopHover(x){
+	x.style.background ="#333";
+}
