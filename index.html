@@ -23,7 +23,7 @@
 
 	<header>
 		
-		<div class="logo"><a href="index.html"><img src="media/meletrix-black.webp" alt="logo"></a></div>
+		<div class="logo"><a href="index.html" ><img src="media/meletrix-black.webp" onmouseover="testHover(this)" onmouseleave="stopHover(this)" alt="logo"></a></div>
 
 		<div class="nav">
 			<ul>
@@ -32,12 +32,12 @@
 				<li><a href="aboutus.html">About Us</a></li>
 				<li><a href="#">Help</a></li>
 				<li><a href="contactus.html">Contact Us</a></li>
-				<li><button onclick="HelloWorld()" onmouseover="testHover(this)" onmouseleave="stopHover(this)">Show Message</button></li>
+				<li><button onclick="HelloWorld()">Show Message</button></li>
 			</ul>
 		</div>
 		
 		<div id="search-container">
-			<input type="text" placeholder="Search">
+			<input type="text" placeholder="Search" onfocus="inputFocus(this)" onblur="inputBlur(this)">
 		</div>
 
 		
@@ -48,7 +48,8 @@
 			
 		</ul>
 		</div>
-		<div id="hamburger-menu">
+
+		<!--<div id="hamburger-menu">
 			
 			<input type="checkbox" id="burger-button">
 			<label for="burger-button"></label>
@@ -63,9 +64,25 @@
 				
 			</ul>
 			
-		</div>
+		</div>-->
 
-		
+		<div class = "dropdown">
+			<ul>
+				
+				<li><a href="products.html">Products</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
+				
+			</ul>
+			
+		</div>
+		<div class ="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 
 		<div id="search-icon">
 			<a href="#"><img src="media/Search.png" alt ="Menu"></a>
@@ -227,7 +244,7 @@
 			<p>Sign up to be updated with exclusive offers, product releases, news and more!</p>
 
 			<div id="emailinput"> 
-				<input type="text" placeholder="Enter your e-mail">
+				<input type="text" onfocus="inputFocus(this)" onblur="inputBlur(this)" placeholder="Enter your e-mail">
 				<input type="button" value=">">
 			</div>
 			

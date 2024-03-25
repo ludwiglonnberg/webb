@@ -1,9 +1,15 @@
 function HelloWorld(){
 	alert("Hello, JavaScript!")
 }
+const hamburgerMenu = document.querySelector('.hamburger');
+
+const dropDown = document.querySelector('.dropdown');
+
+hamburgerMenu.addEventListener('click', () =>{
+	hamburgerMenu.classList.toggle('active');
+	dropDown.classList.toggle('active');
+})
 let slideIndex = 0;
-
-
 
 function changeSlide(n) {
     showSlide(slideIndex += n);
@@ -34,10 +40,22 @@ function showSlide(n) {
 	dots[slideIndex].classList.add("active");
 }
 
+function inputFocus(x){
+	x.style.backgroundColor ="white";
+}
+
+function inputBlur(x){
+	x.style.backgroundColor ="transparent";
+}
 function testHover(x){
-	x.innerHTML = "small";
+	x.style.backgroundColor ="white";
+	x.style.padding="0px";
+	x.style.borderRadius ="35px";
+	x.style.border ="solid 1px";
+
 }
 
 function stopHover(x){
-	x.style.background ="#333";
+	x.style.background ="transparent";
+	x.style.border ="none";
 }

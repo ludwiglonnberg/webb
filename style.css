@@ -79,7 +79,7 @@ header {
 #search-icon{
 	display: none;
 }
-
+/*
 #hamburger-menu{
 	display: none;
 	font-size: 40px;
@@ -118,7 +118,59 @@ input[type="checkbox"] + label {
 	border-color: #c5c3c3;
 	background-color: #e5e5e5;
 }
+*/
+.dropdown{
+	background-color: #e5e5e5;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	max-width: 450px;
+	left: -450px;
+	text-align: center;
+	font-size: 30px;
 
+
+}
+.dropdown:active{
+	left: 0;
+}
+.hamburger{
+	place-items: center;
+	height: 50px;
+	width: 45px;
+	position: relative;
+	margin-bottom: 45px;
+}
+.hamburger span {
+	
+	height:5px;
+	width: 100%;
+	background-color: #333;
+	border-radius: 25px;
+	position: absolute;
+	top: 50%;
+	transition: .3s ease;
+}
+.hamburger span:nth-child(1){
+	top:25%;
+}
+
+.hamburger span:nth-child(3){
+	top:75%;
+}
+
+.hamburger.active span:nth-child(1){
+	top:50%;
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+	opacity: 0;
+}
+.hamburger.active span:nth-child(1){
+	top:50%;
+	transform: translate(-50%,50%) rotate(-45deg);
+}
 .profile {
 	grid-area: profile;
 }
@@ -777,6 +829,7 @@ footer {
 .news input{
 	width: 200px;
 	font-size: large;
+	background-color: transparent;
 	
 }
 
@@ -811,18 +864,19 @@ footer {
 		grid-template-columns: 1fr 1fr 3fr 2fr;
 		
 	}
-	#hamburger-menu {
-		display: block;
+	
+	.hamburger{
+		
 		grid-column: 1;
 		grid-row: 1;
 		place-self: center;
 		margin-top: 45px;
 
 	}
-
+	/*
 	#burger-button:checked ~ .dropdown{
 		display: block;
-	}
+	}*/
 	#search-container{
 		grid-column: 2;
 	}
@@ -1019,22 +1073,20 @@ footer {
 @media screen and (max-width: 850px){
 	header {
 		height: 150px;
-		grid-template-rows: auto;
+		
+		grid-template-rows: 1fr;
 		place-items: center;
 
 	}
 
 	header img {
 		transform: scale(130%);
+		margin-top: 14px;
 	}
 	.hero img{
 		min-width: 500px;
 	}
-	.dropdown{
-		margin-top: 38px;
-		margin-right: 100px;
-	}
-
+	
 	#search-container {
 		display: none;
 	}
@@ -1043,6 +1095,7 @@ footer {
 		display: block;
 		text-align: center;
 		grid-column: 2;
+		grid-row: 1;
 	}
 
 	.herotext p {
