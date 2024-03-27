@@ -119,6 +119,7 @@ input[type="checkbox"] + label {
 	background-color: #e5e5e5;
 }
 */
+
 .dropdown{
 	background-color: #e5e5e5;
 	position: relative;
@@ -128,18 +129,33 @@ input[type="checkbox"] + label {
 	left: -450px;
 	text-align: center;
 	font-size: 30px;
-
-
+	transition: ease-in 0.3s;
+	
 }
-.dropdown:active{
+
+.dropdown.active{
 	left: 0;
 }
+.dropdown ul {
+	margin: 0;
+	
+}
+.dropdown a:hover,li:hover{
+	color: #000000;
+	text-decoration: underline;
+	transition: ease-in 0.8s;
+	
+	
+}
 .hamburger{
+	display: none;
 	place-items: center;
 	height: 50px;
 	width: 45px;
 	position: relative;
+	z-index: 1;
 	margin-bottom: 45px;
+	cursor: pointer;
 }
 .hamburger span {
 	
@@ -149,8 +165,11 @@ input[type="checkbox"] + label {
 	border-radius: 25px;
 	position: absolute;
 	top: 50%;
-	transition: .3s ease;
+	transition: ease-in 0.3s;
+	
 }
+
+
 .hamburger span:nth-child(1){
 	top:25%;
 }
@@ -161,15 +180,17 @@ input[type="checkbox"] + label {
 
 .hamburger.active span:nth-child(1){
 	top:50%;
-	transform: translate(-50%,-50%) rotate(45deg);
+	width: 80%;
+	transform:rotate(405deg);
 }
 
 .hamburger.active span:nth-child(2){
 	opacity: 0;
 }
-.hamburger.active span:nth-child(1){
+.hamburger.active span:nth-child(3){
 	top:50%;
-	transform: translate(-50%,50%) rotate(-45deg);
+	width: 80%;
+	transform:rotate(-405deg);
 }
 .profile {
 	grid-area: profile;
@@ -273,7 +294,10 @@ input[type="checkbox"] + label {
 .dot:nth-child(3){
 	grid-column: 3;
 }
-.active,.dot:hover{
+.dot:hover{
+	opacity: 85%;
+}
+.dot.active{
 	opacity: 85%;
 }
 
@@ -866,7 +890,7 @@ footer {
 	}
 	
 	.hamburger{
-		
+		display: grid;
 		grid-column: 1;
 		grid-row: 1;
 		place-self: center;
@@ -1082,6 +1106,12 @@ footer {
 	header img {
 		transform: scale(130%);
 		margin-top: 14px;
+	}
+	.dropdown{
+		top: 10px;
+		
+		width: 130%;
+		margin-left: 50px;
 	}
 	.hero img{
 		min-width: 500px;

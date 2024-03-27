@@ -1,14 +1,15 @@
 function HelloWorld(){
 	alert("Hello, JavaScript!")
 }
-const hamburgerMenu = document.querySelector('.hamburger');
 
-const dropDown = document.querySelector('.dropdown');
+function hamburgerActive(){
+	let burger = document.querySelector(".hamburger");
+	let menu = document.querySelector(".dropdown");
+	menu.classList.toggle('active');
+	burger.classList.toggle('active');
+	
+}
 
-hamburgerMenu.addEventListener('click', () =>{
-	hamburgerMenu.classList.toggle('active');
-	dropDown.classList.toggle('active');
-})
 let slideIndex = 0;
 
 function changeSlide(n) {
