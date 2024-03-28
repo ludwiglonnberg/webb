@@ -46,7 +46,7 @@ header {
 
 .logo {
 	grid-area: logo;
-	
+	transition: transform 0.3s;
 }
 
 .logo img {
@@ -373,12 +373,13 @@ input[type="checkbox"] + label {
 	position: relative;
 	overflow: hidden;
 	border-radius: 15px;	
+	transition: transform 0.3s;
 
 }
 
-.products:hover{
-	transform: scale(105%);
-}
+
+
+
 
 .products h1{
 	margin: 0;
@@ -398,7 +399,7 @@ input[type="checkbox"] + label {
 	width: 100%;
 	height: auto;
 	border-radius: 15px;
-
+	
 	
 }
 

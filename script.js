@@ -2,6 +2,7 @@ function HelloWorld(){
 	alert("Hello, JavaScript!")
 }
 
+//hamburger/dropdown
 function hamburgerActive(){
 	let burger = document.querySelector(".hamburger");
 	let menu = document.querySelector(".dropdown");
@@ -10,8 +11,8 @@ function hamburgerActive(){
 	
 }
 
+// slideshow
 let slideIndex = 0;
-
 function changeSlide(n) {
     showSlide(slideIndex += n);
 }
@@ -41,22 +42,45 @@ function showSlide(n) {
 	dots[slideIndex].classList.add("active");
 }
 
+// input fields
 function inputFocus(x){
 	x.style.backgroundColor ="white";
 }
-
 function inputBlur(x){
 	x.style.backgroundColor ="transparent";
 }
+
+//Logo hover
 function testHover(x){
-	x.style.backgroundColor ="white";
-	x.style.padding="0px";
-	x.style.borderRadius ="35px";
-	x.style.border ="solid 1px";
+	x.style.transform = "scale(110%)"
+	x.style
 
 }
-
 function stopHover(x){
-	x.style.background ="transparent";
-	x.style.border ="none";
+	x.style.transform = "translate(0, 0)"
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+	const products = document.querySelectorAll(".products");
+	
+      
+	products.forEach(product => {
+		product.addEventListener("mousemove", function(event) {
+			moveObject(event, product);
+		});
+	
+		product.addEventListener("mouseleave", function() {
+			resetPosition(product);
+		});
+	});
+});
+      
+function moveObject(event, product) {
+	product.style.transform ="translateY(-10px)";
+}
+      
+function resetPosition(product) {
+	product.style.transform = "translate(0, 0)";
+}
+
+      
