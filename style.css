@@ -14,9 +14,10 @@ a{
 	
 }
 
+/*
 a:hover:not(.dot){
 	color: #8a8787;
-}
+}*/
 
 li {
 	list-style: none;
@@ -140,13 +141,13 @@ input[type="checkbox"] + label {
 	margin: 0;
 	
 }
+/*
 .dropdown a:hover,li:hover{
 	color: #000000;
-	text-decoration: underline;
-	transition: ease-in 0.8s;
+	background-color: #b9b9b9;
 	
 	
-}
+}*/
 .hamburger{
 	display: none;
 	place-items: center;
@@ -374,6 +375,7 @@ input[type="checkbox"] + label {
 	overflow: hidden;
 	border-radius: 15px;	
 	transition: transform 0.3s;
+	
 
 }
 
@@ -524,6 +526,7 @@ input[type="checkbox"] + label {
 .item img{
 	border-radius: 15px;
 	box-shadow: 5px 5px 5px 0px #00000031;
+	transition: transform 0.3s;
 	
 }
 
