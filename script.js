@@ -49,10 +49,22 @@ function inputFocus(x){
 function inputBlur(x){
 	x.style.backgroundColor ="transparent";
 }
-window.onload = () => {
 
-};
+$(document).ready(function() {
+    console.log("Document ready"); // Check if document is ready
+    
+    $('.menu-item').mouseover(function() {
+        $(this).children('.submenu').slideDown();
+    }).mouseleave(function() {
+        $(this).children('.submenu').slideUp();
+    });
 
+    $('.item1').mouseover(function() {
+        $(this).children('.nested-submenu').slideDown();
+    }).mouseleave(function() {
+        $(this).children('.nested-submenu').slideUp();
+    });
+});
 //Logo hover
 function testHover(x){
 	x.style.transform = "scale(110%)";
