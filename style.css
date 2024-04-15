@@ -45,14 +45,30 @@ header {
 	box-shadow: 5px 5px 20px 0px #00000031;
 }
 
+.underline{
+	place-self: left;
+	margin-left: 45px;
+	position: absolute;
+	z-index: 1;
+	bottom: 15px;
+	
+	border-radius: 10px;
+	width: 0px;
+	height: 2px;
+	background-color: #000000;
+	box-shadow: 0px -75px 0px 0px #000000;
+}
 .logo {
 	grid-area: logo;
-	transition: transform 0.3s;
+	
+	
 }
 
 .logo img {
+	
 	width: 250px;
 	padding: 20px;
+	
 	
 }
   
@@ -77,28 +93,33 @@ header {
 	border: solid 1px;
 	border-color: #9c9c9c;
 	padding: 8px;
-	
-	
 	background: linear-gradient(#f3f2f2, #ffffff);
+
+	cursor:default;
 	
 }
 
 .nested-submenu {
-    position: absolute;
+    	position: absolute;
 	z-index: 1;
 	left: 100%;
 	margin: 0;
 	top: 0;
 	display: none;
+	min-width: 250px;
 	font-size: 20px;
 	font-weight: 500;
 	border: solid 1px;
 	border-color: #9c9c9c;
 	padding: 8px;
 	width: 100%;
-    background: linear-gradient(#f3f2f2, #ffffff);
+   	background: linear-gradient(#f3f2f2, #ffffff);
+
+	cursor:default;
    
 }
+
+
 #search-container input {
 	grid-area: search;
 	max-width: 200px;
@@ -410,10 +431,6 @@ input[type="checkbox"] + label {
 	
 
 }
-
-
-
-
 
 .products h1{
 	margin: 0;
@@ -944,7 +961,11 @@ footer {
 		grid-column: 3;
 		text-align: center;
 	}
-	
+	.underline{
+		place-self: center;
+		margin-left: 0;
+		
+	}
 	
 	.nav{
 		display: none;

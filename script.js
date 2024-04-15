@@ -51,39 +51,71 @@ function inputBlur(x){
 }
 
 $(document).ready(function() {
-    console.log("Document ready"); // Check if document is ready
     
-    $('.menu-item').mouseover(function() {
-        $(this).children('.submenu').slideDown();
-    }).mouseleave(function() {
-        $(this).children('.submenu').slideUp();
-    });
+	$('.menu-item').mouseover(function() {
+		$('.submenu').slideDown();
+	}).mouseleave(function() {
+		$('.submenu').slideUp();
+		
+	});
 
-    $('.item1').mouseover(function() {
-        $(this).children('.nested-submenu').slideDown();
-    }).mouseleave(function() {
-        $(this).children('.nested-submenu').slideUp();
-    });
+	$('.item1').mouseover(function() {
+		$('.nested-submenu').slideDown();
+	});
+	
+	$('.nested-submenu').mouseleave(function() {
+		$('.nested-submenu').slideUp();
+	});
+
+	$('#switch-item, #cap-item').mouseover(function(){
+		$('.nested-submenu').slideUp();
+	});
+	
+	$(".logo img").mouseover(function() {
+		$(".logo img").animate({
+			height: "90px",
+			width: "300px",
+			opacity: "0.5"
+		}, 200, function(){
+
+		});
+		
+		$(".underline").animate({
+			width:"250px",
+			opacity: "0.5"
+		});
+
+		
+	});
+
+	$(".logo").mouseleave(function() {
+		$(".logo img").animate({
+			height: "70px",
+			width: "250px",
+			opacity: 1
+		}, 200, function(){
+
+		});
+
+		$(".underline").animate({
+			width:"0px",
+			opacity: 1
+		})
+	});
 });
-//Logo hover
-function testHover(x){
-	x.style.transform = "scale(110%)";
 
-}
-function stopHover(x){
-	x.style.transform = "translate(0, 0)";
-}
+
+
 
 window.onload = () => { 
-	let navLinks = document.querySelectorAll(".nav a");
-	let products = document.querySelectorAll(".products");
-	let items = document.querySelectorAll(".item img");
+	let navLinks = document.querySelectorAll(".nav a, .submenu li, .dropdown a");
+	let products = document.querySelectorAll(".products, .item img");
 	let input = document.querySelectorAll("input")
 	
 	//changes apperance of navigation links on mouseover
     for (let i = 0; i < navLinks.length; i++) {
         navLinks[i].addEventListener("mouseover", function() {
-            this.style.color = "red";
+            this.style.color = "grey";
         });
 
         navLinks[i].addEventListener("mouseout", function() {
@@ -103,21 +135,7 @@ window.onload = () => {
         });
 		
     }
-
-	//changes apperance of all items on mouseover
-	for (let i = 0; i < items.length; i++) {
-        items[i].addEventListener("mouseover", function() {
-            this.style.transform ="translateY(-10px)";
-			
-			
-        });
-
-        items[i].addEventListener("mouseout", function() {
-           this.style.transform = "translate(0, 0)";
-		   
-        });
-		
-    }
+	
 	//changes apperance of input fields on focus
 	for (let i = 0; i < input.length; i++) {
         input[i].addEventListener("focus", function() {
