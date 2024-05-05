@@ -22,35 +22,51 @@
 
 
 	<header>
-
-		<div class="logo"><a href="index.html"><img src="media/meletrix-black.webp" alt="logo"></a></div>
+		
+		<div class="logo"><a href="index.html" ><img src="media/meletrix-black.webp" alt="logo"></a></div>
+		<div class="underline"></div>
+		
+		
 
 		<div class="nav">
 			<ul>
-				<li class ="menu-item"><a href="products.html">Products</a></li>
+				<li class ="menu-item">
+					<a href="products.html">Products ▾</a>
+					<ul class ="submenu" >
+						<li class ="item1"><a href="products.html">Keyboards ▸</a></li>
+						<ul class="nested-submenu" >
+							<li><a href="zoomtkl.html">ZOOM TKL ESSENTIAL EDITION</a></li>
+							<li><a href="#">Boog75 Prebuilt</a></li>
+							<li><a href="#">Zoom98 EE</a></li>
+							<li><a href="#">Zoom65 Essential Edition V2</a></li>
+						</ul>
+						<li id ="switch-item"><a href="products.html">Switches</a></li>
+						<li id ="cap-item"><a href="products.html">Keycaps</a></li>
+					</ul>
+				</li>
 				<li><a href="#">News</a></li>
 				<li><a href="aboutus.html">About Us</a></li>
 				<li><a href="#">Help</a></li>
 				<li><a href="contactus.html">Contact Us</a></li>
+				<li><button onclick="HelloWorld()">Show Message</button></li>
 			</ul>
 		</div>
-
+		
 		<div id="search-container">
 			<input type="text" placeholder="Search">
 		</div>
 
+		
 		<div class="profile">
 		<ul>
 			<li><a href="#"><img src="media/User.png" alt ="User"></a></li>
 			<li><a href="#"><img src="media/ShoppingCart.png" alt ="Shopping Cart"></a></li>
+			
 		</ul>
 		</div>
-
-		<div id="hamburger-menu">
-			
-			<input type="checkbox" id="burger-button">
-			<label for="burger-button"></label>
-			<ul class="dropdown">
+	
+		<div class = "dropdown">
+			<ul>
 				
 				<li><a href="products.html">Products</a></li>
 				<li><a href="#">News</a></li>
@@ -61,11 +77,17 @@
 			</ul>
 			
 		</div>
+		<div class ="hamburger" onclick="hamburgerActive()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 
-		
 		<div id="search-icon">
 			<a href="#"><img src="media/Search.png" alt ="Menu"></a>
 		</div>
+
+		
 	</header>
 	
 	<ul class="trail">

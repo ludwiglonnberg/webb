@@ -102,6 +102,14 @@ $(document).ready(function() {
 			opacity: 1
 		})
 	});
+
+	$(".products").draggable({
+		revert: "invalid"
+	});
+
+	$("#container-1").droppable({
+	});
+
 });
 
 
