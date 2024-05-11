@@ -1,6 +1,4 @@
-function HelloWorld(){
-	alert("Hello, JavaScript!")
-}
+
 
 //hamburger/dropdown
 function hamburgerActive(){
