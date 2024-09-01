@@ -189,6 +189,7 @@ input[type="checkbox"] + label {
 .dropdown.active{
 	left: 0;
 }
+
 .dropdown ul {
 	margin: 0;
 	
@@ -222,7 +223,6 @@ input[type="checkbox"] + label {
 	
 }
 
-
 .hamburger span:nth-child(1){
 	top:25%;
 }
@@ -245,6 +245,8 @@ input[type="checkbox"] + label {
 	width: 80%;
 	transform:rotate(-405deg);
 }
+
+
 .profile {
 	grid-area: profile;
 }
@@ -330,7 +332,7 @@ input[type="checkbox"] + label {
 	position: absolute;
 	height: 15px;
 	width: 15px;
-	background-color: #ffffff;
+	background-color: #000000;
 	opacity: 40%;
 	border-radius: 50%;
 	bottom: 2%;
