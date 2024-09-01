@@ -108,7 +108,7 @@ function hideNestedSubMenu() {
 	$('.nested-submenu').slideUp();
 }
 
-function logoHover() {
+function logoEnter() {
 	$(".logo img").animate({
 		height: "90px",
 		width: "300px",
@@ -134,20 +134,26 @@ function logoLeave() {
 	});
 }
 
+function nestedDropMenu() {
+	$('.menu-item').mouseover(showSubMenu).mouseleave(hideSubMenu);
+	$('.item1').mouseover(showNestedSubMenu);
+	$('.nested-submenu').mouseleave(hideNestedSubMenu);
+	$('#switch-item, #cap-item').mouseover(hideNestedSubMenu);
+}
+
+function logoHoverEffect(){
+	$(".logo img").mouseover(logoEnter);
+	$(".logo").mouseleave(logoLeave);
+}
 $(document).ready(function() {
 
 	navLinkHover();
 	productImgHover();
 	inputFocus();
 
-	$('.menu-item').mouseover(showSubMenu).mouseleave(hideSubMenu);
-
-	$('.item1').mouseover(showNestedSubMenu);
-	$('.nested-submenu').mouseleave(hideNestedSubMenu);
-	$('#switch-item, #cap-item').mouseover(hideNestedSubMenu);
-
-	$(".logo img").mouseover(logoHover);
-	$(".logo").mouseleave(logoLeave);
+	nestedDropMenu();
+	logoHoverEffect();
+	
 
 	$(".products").draggable({
 		revert: "invalid" 
